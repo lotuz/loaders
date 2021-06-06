@@ -14,6 +14,7 @@ properties(CSS variables) are there to enable overriding the defaults.
 ## Framework table
 
 | Components | HTML | React | Vue | Svelte |
+|------------|------|-------|-----|--------|
 | Spinner    | x    | x     | x   | x      |
 | Bars       | x    | x     | x   | x      |
 
@@ -30,9 +31,10 @@ use classes.
 
 ## Properties table
 
-| Components | color   | size     | time           | format            |
-| Spinner    | inherit | inherit  | linear, bezier | no-border, border |
-| Bars       | inherit | inherit  |                |                   |
+| Components | color   | size    | time           | format            |
+|------------|---------|---------|----------------|-------------------|
+| Spinner    | inherit | inherit | linear, bezier | no-border, border |
+| Bars       | inherit | inherit |                |                   |
 
 # Accessibility
 

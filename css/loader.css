@@ -1,0 +1,6 @@
+.loader {
+  display: inline-block;
+  color: var(--color, currentColor);
+  font-size: var(--size, 1rem);
+  vertical-align: bottom;
+}

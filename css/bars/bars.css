@@ -1,0 +1,52 @@
+@import '../loader.css';
+
+.loader-bars {
+  width: 1.125em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loader-bars_bar_1,
+.loader-bars_bar_2,
+.loader-bars_bar_3,
+.loader-bars_bar_4,
+.loader-bars_bar_5 {
+  display: inline-block;
+  width: 0.2em;
+  height: 0.4em;
+  animation: stretch var(--duration, 1.6s) ease-out infinite;
+  background-color: var(--color, currentColor);
+}
+
+.loader-bars_bar_1 {
+  animation-delay: calc(var(--duration, 1.6s) / 6 * 0);
+}
+
+.loader-bars_bar_2 {
+  animation-delay: calc(var(--duration, 1.6s) / 6 * 1);
+}
+
+.loader-bars_bar_3 {
+  animation-delay: calc(var(--duration, 1.6s) / 6 * 2);
+}
+
+.loader-bars_bar_4 {
+  animation-delay: calc(var(--duration, 1.6s) / 6 * 3);
+}
+
+.loader-bars_bar_5 {
+  animation-delay: calc(var(--duration, 1.6s) / 6 * 4);
+}
+
+@keyframes stretch {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(2.5);
+  }
+}

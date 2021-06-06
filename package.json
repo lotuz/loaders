@@ -1,0 +1,67 @@
+{
+  "name": "@lotuz/loaders",
+  "version": "0.0.1",
+  "description": "A library of loading indicators",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-storybook": "build-storybook",
+    "start": "run-p sb:dev sb:delayed-main",
+    "storybook": "run-s sb:build sb:start",
+    "sb:start": "run-p sb:serve sb:main",
+    "sb:main": "start-storybook -p 6006",
+    "sb:delayed-main": "delay 10 && start-storybook -p 6006",
+    "sb:build": "run-p sb:build:*",
+    "sb:build:html": "cd html && npm run build-storybook",
+    "sb:build:react": "cd react && npm run build-storybook",
+    "sb:build:vue": "cd vue && npm run build-storybook",
+    "sb:build:svelte": "cd svelte && npm run build-storybook",
+    "sb:serve": "run-p sb:serve:*",
+    "sb:serve:html": "cd html && http-server storybook-static -p 8080 --cors",
+    "sb:serve:react": "cd react && http-server storybook-static -p 8081 --cors",
+    "sb:serve:vue": "cd vue && http-server storybook-static -p 8082 --cors",
+    "sb:serve:svelte": "cd svelte && http-server storybook-static -p 8083 --cors",
+    "sb:dev": "run-p sb:dev:*",
+    "sb:dev:html": "cd html && npm run storybook",
+    "sb:dev:react": "cd react && npm run storybook",
+    "sb:dev:vue": "cd vue && npm run storybook",
+    "sb:dev:svelte": "cd svelte && npm run storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotuz/loaders.git"
+  },
+  "keywords": [
+    "loader",
+    "indicator",
+    "react",
+    "vue",
+    "svelte",
+    "vanilla"
+  ],
+  "author": "marcel0ll",
+  "license": "nolicence",
+  "bugs": {
+    "url": "https://github.com/lotuz/loaders/issues"
+  },
+  "homepage": "https://github.com/lotuz/loaders#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@storybook/addon-actions": "^6.3.0-beta.14",
+    "@storybook/addon-essentials": "^6.3.0-beta.14",
+    "@storybook/addon-links": "^6.3.0-beta.14",
+    "@storybook/react": "^6.3.0-beta.14",
+    "babel-loader": "^8.2.2",
+    "delay": "^5.0.0",
+    "delay-cli": "^1.1.0",
+    "http-server": "^0.12.3"
+  }
+}

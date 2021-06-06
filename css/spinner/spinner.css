@@ -1,0 +1,50 @@
+@import '../loader.css';
+
+.loader-spinner {
+  position: relative;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.loader-spinner_spinner,
+.loader-spinner_background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.loader-spinner_spinner {
+  border: 0.1em transparent solid;
+  border-top: 0.1em var(--color, currentColor) solid;
+}
+
+.linear .loader-spinner_spinner {
+  animation: spin var(--duration, 1s) linear infinite;
+}
+
+.bezier .loader-spinner_spinner {
+  animation: spin var(--duration, 1s) cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loader-spinner_background {
+  border: 0.1em var(--color, currentColor) solid;
+  opacity: .25;
+}
+
+.no-border .loader-spinner_background {
+  border-color: transparent;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

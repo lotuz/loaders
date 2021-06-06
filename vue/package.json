@@ -1,0 +1,25 @@
+{
+  "name": "@lotuz/loaders-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 8082",
+    "build-storybook": "build-storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@storybook/addon-actions": "^6.3.0-beta.14",
+    "@storybook/addon-essentials": "^6.3.0-beta.14",
+    "@storybook/addon-links": "^6.3.0-beta.14",
+    "@storybook/vue3": "^6.3.0-beta.14",
+    "babel-loader": "^8.2.2",
+    "vue-loader": "^16.2.0"
+  }
+}

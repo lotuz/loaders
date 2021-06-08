@@ -16,6 +16,7 @@
   height: 100%;
   border-radius: 50%;
   box-sizing: border-box;
+  will-change: transform;
 }
 
 .loader-spinner_spinner {

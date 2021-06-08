@@ -18,6 +18,7 @@
   height: 0.4em;
   animation: stretch var(--duration, 1.6s) ease-out infinite;
   background-color: var(--color, currentColor);
+  will-change: transform;
 }
 
 .loader-bars_bar_1 {

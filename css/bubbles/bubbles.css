@@ -1,0 +1,46 @@
+@import '../loader.css';
+
+.loader-bubbles {
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.loader-bubble_1,
+.loader-bubble_2,
+.loader-bubble_3 {
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.25em;
+  height: 0.25em;
+  animation: expand var(--duration, 1.6s) ease-in-out infinite;
+  background-color: var(--color, currentColor);
+  aspect-ratio: 1;
+  transform: scale(0);
+  will-change: transform;
+}
+
+.loader-bubble_1 {
+  animation-delay: calc(var(--duration, 1.6s) / 4 * 0);
+}
+
+.loader-bubble_2 {
+  animation-delay: calc(var(--duration, 1.6s) / 4 * 0.75);
+}
+
+.loader-bubble_3 {
+  animation-delay: calc(var(--duration, 1.6s) / 4 * 1.75);
+}
+
+@keyframes expand {
+  0%,
+  40%,
+  100% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+}

@@ -1,9 +1,9 @@
 import React from "react";
-import { Spinner as Component } from "./index";
+import Spinner from "./spinner";
 
 export default {
   title: "Spinner",
-  component: Component,
+  component: Spinner,
   argTypes: {
     color: {
       control: { type: "color" },
@@ -22,11 +22,11 @@ export default {
   },
 };
 
-const Template = (args) => <Component {...args} />;
+const Template = (args) => <Spinner {...args} />;
 
-export const Spinner = Template.bind({});
+export const spinner = Template.bind({});
 
-Spinner.args = {
+spinner.args = {
   color: "inherit",
   size: "inherit",
   timing: "linear",

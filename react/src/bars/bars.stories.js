@@ -1,9 +1,9 @@
 import React from "react";
-import { Bars as Component } from "./index";
+import Bars from "./bars";
 
 export default {
   title: "Bars",
-  component: Component,
+  component: Bars,
   argTypes: {
     color: {
       control: { type: "color" },
@@ -14,11 +14,11 @@ export default {
   },
 };
 
-const Template = (args) => <Component {...args} />;
+const Template = (args) => <Bars {...args} />;
 
-export const Bars = Template.bind({});
+export const bars = Template.bind({});
 
-Bars.args = {
+bars.args = {
   color: "inherit",
   size: "inherit",
 };

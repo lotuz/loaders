@@ -16,7 +16,7 @@ export const Bubbles = ({ color, size }) => `
 <div>
     <span 
       style="--color: ${color}; --size: ${size}"
-      class="loader loader-bubbles linear" 
+      class="loader loader-bubbles" 
       role="progressbar"
       aria-valuemax="1"
       aria-valuemin="0"

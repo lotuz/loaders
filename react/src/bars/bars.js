@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../../css/bars/bars.css";
 
-export const Bars = ({ size, color }) => {
+const Bars = ({ size, color }) => {
   return (
     <span
       className="loader loader-bars"
@@ -23,3 +23,5 @@ export const Bars = ({ size, color }) => {
     </span>
   );
 };
+
+export default Bars;

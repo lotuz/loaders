@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../../../css/spinner/spinner.css';
 
-export const Spinner = ({size, color, timing="linear", format="no-border"}) => {
+const Spinner = ({size, color, timing="linear", format="no-border"}) => {
   return (
     <span
       className={`loader loader-spinner ${timing} ${format}`} 
@@ -17,3 +17,4 @@ export const Spinner = ({size, color, timing="linear", format="no-border"}) => {
   )
 };
 
+export default Spinner;
